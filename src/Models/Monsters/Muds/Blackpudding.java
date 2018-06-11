@@ -1,6 +1,19 @@
 package Models.Monsters.Muds;
 
-public class Blackpudding extends Mud{
+import Models.Monsters.EnumHeight;
+
+public class Blackpudding extends Mud { 
+	
+	private static EnumHeight height = EnumHeight.PETIT;
+	
+	public Blackpudding(String name) {
+		super(name, height);
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + " Blackpudding []";
+	}
 
 	@Override
 	public boolean eat() {
